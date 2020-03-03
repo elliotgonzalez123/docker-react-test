@@ -1,5 +1,4 @@
 sudo: required
-language: generic
 services:
   - docker
 
@@ -12,9 +11,9 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: 'us-east-2'
-  app: 'test'
-  env: 'test'
-  bucket_name: 'test'
+  app: 'docker-react-test'
+  env: 'DockerReactTest-env'
+  bucket_name: 'elasticbeanstalk-us-east-2-622904791075'
   bucket_path: 'docker-react-test'
   on:
     branch: master
